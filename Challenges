@@ -1,0 +1,41 @@
+/* select the desired columns */
+SELECT
+    HACKER_ID,
+    NAME,
+    C_CREATED
+FROM
+
+/* create the table to count number of challenges created by each hacker (total) */
+(SELECT
+    H.HACKER_ID,
+    H.NAME,
+    COUNT(C.CHALLENGE_ID) C_CREATED,
+    CASE
+    
+    /* when number of challenges created < max number of challenges a hacker can created */
+        WHEN COUNT(C.CHALLENGE_ID) < (SELECT MAX(temp1.CNT)
+                                      FROM (SELECT COUNT(C1.CHALLENGE_ID) CNT
+                                            FROM HACKERS H1
+                                            INNER JOIN CHALLENGES C1 ON H1.HACKER_ID=C1.HACKER_ID
+                                            GROUP BY H1.HACKER_ID) temp1)
+                                            
+     /* when more than 1 student can create the number of challenges as above */
+        AND (SELECT COUNT(temp2.CNT) FROM (SELECT COUNT(C2.CHALLENGE_ID) CNT
+                                           FROM HACKERS H2
+                                           INNER JOIN CHALLENGES C2 ON H2.HACKER_ID=C2.HACKER_ID
+                                           GROUP BY H2.HACKER_ID) temp2
+             WHERE temp2.CNT = COUNT(C.CHALLENGE_ID)) > 1     
+        
+        /* then we find a way to exclude those hackers from the list */
+        THEN 'NO'
+        ELSE 'YES'
+    END AS C_CHOOSED
+FROM HACKERS H
+INNER JOIN CHALLENGES C ON C.HACKER_ID = H.HACKER_ID
+GROUP BY 1,2
+
+*/ only choose the hackers that are valid */
+HAVING C_CHOOSED = 'YES') total
+
+*order the result by descending number of challenges created, then the hacker_id (who created max number of challenges) */
+ORDER BY C_CREATED DESC, HACKER_ID;
