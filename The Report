@@ -1,4 +1,6 @@
 SELECT
+    
+/* create the 'Name' column where NULL values exist */
     CASE
         WHEN G.GRADE < 8 THEN NULL
         ELSE S.NAME
@@ -7,4 +9,6 @@ SELECT
     S.MARKS
 FROM STUDENTS S
 INNER JOIN GRADES G ON S.MARKS BETWEEN G.MIN_MARK AND G.MAX_MARK
+
+*/ order by descending grades, then alphabetical name, and marks also */
 ORDER BY G.GRADE DESC, NAME, S.MARKS;
