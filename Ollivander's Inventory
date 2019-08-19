@@ -1,12 +1,19 @@
+/* the columns we want to select */
 SELECT
     W.ID,
     WP.AGE,
     W.COINS_NEEDED,
     W.POWER
+
+/* the table we want to get value from */
 FROM WANDS W
 INNER JOIN WANDS_PROPERTY WP ON W.CODE = WP.CODE
 WHERE WP.IS_EVIL = 0
+
+/* filter only the value where coins_needed is minimum by each code & power */
 AND W.COINS_NEEDED = (SELECT MIN(COINS_NEEDED) FROM WANDS
                       WHERE CODE = W.CODE
                       AND POWER = W.POWER)
+                      
+/* order by descending power then descending age */
 ORDER BY W.POWER DESC, WP.AGE DESC;
