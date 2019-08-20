@@ -1,0 +1,24 @@
+/* select the columns we want */
+SELECT
+    H.hacker_id,
+    H.name,
+    SUM(temp.max_score) total_score
+FROM
+
+/* create the temporary table that contains the max_score by each pair of (hacker_id, challenge_id) */
+(SELECT
+    hacker_id,
+    challenge_id,
+    max(score) max_score
+FROM Submissions S
+GROUP BY 1,2) temp
+
+*/ join "temp" table with "hackers" table to get the name of hackers */
+INNER JOIN Hackers H ON H.hacker_id = temp.hacker_id
+GROUP BY 1,2
+
+*/ exclude the hackers with total scores = 0 */
+HAVING total_score > 0
+
+/* order the result by descending total scores, then the ascending hacker_id */
+ORDER BY 3 DESC, 1;
