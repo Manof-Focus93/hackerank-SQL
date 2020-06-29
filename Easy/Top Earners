@@ -1,0 +1,12 @@
+SELECT
+    earning,
+    COUNT(DISTINCT(employee_id))
+FROM
+    (SELECT
+        employee_id,
+        SUM(months * salary) earning
+     FROM EMPLOYEE
+     GROUP BY employee_id
+     HAVING earning = (SELECT MAX(months * salary)
+                       FROM EMPLOYEE)) temp
+GROUP BY earning;
