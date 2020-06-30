@@ -1,3 +1,17 @@
 ## **LINK TO THE CHALLENGES**
 
+[Weather Observation Station 18](https://www.hackerrank.com/challenges/weather-observation-station-18/problem)
+[Weather Observation Station 18](https://www.hackerrank.com/challenges/weather-observation-station-19/problem)
+[Weather Observation Station 18](https://www.hackerrank.com/challenges/weather-observation-station-20/problem)
 [Top Competitors](https://www.hackerrank.com/challenges/full-score/problem)
+[The Report](https://www.hackerrank.com/challenges/the-report/problem)
+[The PAD](https://www.hackerrank.com/challenges/the-pads/problem)
+[Binary Tree Nodes](https://www.hackerrank.com/challenges/binary-search-tree-1/problem)
+[New Companies](https://www.hackerrank.com/challenges/binary-search-tree-1/problem)
+[Ollivander's Inventory](https://www.hackerrank.com/challenges/harry-potter-and-wands/problem)
+[Challenges](https://www.hackerrank.com/challenges/challenges/problem)
+[Contest Leaderboard](https://www.hackerrank.com/challenges/contest-leaderboard/problem)
+[SQL Project Planning](https://www.hackerrank.com/challenges/sql-projects/problem)
+[Placements](https://www.hackerrank.com/challenges/placements/problem)
+[Symmetric Pairs](https://www.hackerrank.com/challenges/symmetric-pairs/problem)
+[Print Prime Numbers](https://www.hackerrank.com/challenges/print-prime-numbers/problem)
