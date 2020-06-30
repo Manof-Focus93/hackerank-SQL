@@ -1,3 +1,3 @@
-### **LINK TO THE CHALLENGES**
+## **LINK TO THE CHALLENGES**
 
 [Top Competitors](https://www.hackerrank.com/challenges/full-score/problem)
