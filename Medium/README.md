@@ -8,7 +8,7 @@
 4|Top Competitors|[Hackerrank](https://www.hackerrank.com/challenges/full-score/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Weather%20Observation%20Station%2018)
 5|The Report|[Hackerrank](https://www.hackerrank.com/challenges/the-report/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Weather%20Observation%20Station%2018)
 6|The PAD|[Hackerrank](https://www.hackerrank.com/challenges/the-pads/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Weather%20Observation%20Station%2018)
-7|Binary Tree Nodes|[Hackerrank](https://www.hackerrank.com/challenges/binary-search-tree-1/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Weather%20Observation%20Station%2018)
+7|Binary Tree Nodes|[Hackerrank](https://www.hackerrank.com/challenges/binary-search-tree-1/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Binary%20Tree%20Nodes)
 8|New Companies|[Hackerrank](https://www.hackerrank.com/challenges/binary-search-tree-1/problem)|[Git](https://github.com/steven-wick/hackerank-SQL/blob/master/Medium/Weather%20Observation%20Station%2018)
 9|Ollivander's Inventory|[Hackerrank](https://www.hackerrank.com/challenges/harry-potter-and-wands/problem)|[Git]
 10|Challenges|[Hackerrank](https://www.hackerrank.com/challenges/challenges/problem)|[Git]
