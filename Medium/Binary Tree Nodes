@@ -1,0 +1,23 @@
+/* Only select unique value */
+SELECT
+    DISTINCT N, node_type
+FROM
+
+/* Categorize node_type based on child & parent */
+(SELECT
+    N,
+    CASE
+        WHEN C IS NULL THEN 'Leaf'
+        WHEN P IS NULL THEN 'Root'
+        ELSE 'Inner'
+    END AS node_type
+    
+/* Self-join to find out which nodes which appropriate childs and parents */
+FROM (SELECT
+        t1.N C,
+        t2.N N,
+        t2.P P
+      FROM BST t1
+      RIGHT JOIN BST t2 ON t2.N = t1.P) temp1
+) temp2
+ORDER BY N;
